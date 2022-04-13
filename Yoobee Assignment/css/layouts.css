@@ -23,7 +23,7 @@ footer {
   place-items: center;
 }
 
-main {
+.main {
   grid-area: main;
   padding-left: 20px;
 }
@@ -68,13 +68,16 @@ footer {
 }
 
 .copyright_grid {
-  display: grid;
+  display: inline-block;
+  float: right;
   grid-template-columns: 1fr 60px;
 }
 
 .footer_leftgrid {
-  display: grid;
+  display: inline-block;
+  float: left;
   grid-template-columns: 197px 1fr;
+  
 }
 
 section {
@@ -92,6 +95,20 @@ section {
       "aside"
       "footer";
   }
+
+  .header-nav{
+    font-size: 15px;
+    gap: 20px;
+  }
+
+  .nav-logo{
+    width: 200px;
+  }
+
+h1{
+  font-size: 34px;
+}
+
 }
 
 @media (min-width: 700px) and (max-width: 1200px) {
@@ -103,6 +120,8 @@ section {
       "main aside"
       "footer footer";
   }
+
+
 }
 
 @media (min-width: 1200px) {
@@ -110,8 +129,8 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 1fr 200px;
     grid-template-areas:
-      "header header header"
+      "header header"
       "main main aside"
-      "aside footer footer";
+      "aside footer";
   }
 }
